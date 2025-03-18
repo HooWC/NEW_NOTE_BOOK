@@ -83,6 +83,7 @@ Learning
 
 ```
 192.1.1.8 -> IT_Documents -> IT -> Program Installation
+ERP Testing Account
 
 X:\HSA_ACC
 ```
@@ -122,7 +123,11 @@ New Remote View
 mtrailer_type2
 ```
 
+```
+SELECT trailer_type_id, trailer_type_if, createby, createdt, modifyby, modifydt FROM mtrailer_type2 WHERE trailer_type_id LIKE ?PKValue and trailer_type_id LIKE ?FindTrailer_Type_Id and trailer_type_if LIKE ?FindTrailer_Type_If
 
+Build的结果：TRAILER_TYPE_ID C(50), TRAILER_TYPE_IF C(100), CREATEBY C(10), CREATEDT T, MODIFYBY C(10), MODIFYDT T
+```
 
 
 
