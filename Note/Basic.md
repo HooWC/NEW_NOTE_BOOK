@@ -112,6 +112,22 @@ Instances 界面
 		- Edit inbound rules
 ```
 
+```
+New Remote View
+	 - New View
+	 - （出现Models） 寻找你要的table
+```
+
+```
+mtrailer_type2
+```
+
+
+
+
+
+
+
 
 
 ### ===
