@@ -83,5 +83,25 @@ Learning
 
 ```
 192.1.1.8 -> IT_Documents -> IT -> Program Installation
+
+X:\HSA_ACC
 ```
+
+```
+9096844HWChwc
+```
+
+
+
+
+
+### ===
+
+```
+1. check full time resigntion need how long to inform HR know
+```
+
+
+
+
 
