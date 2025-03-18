@@ -91,7 +91,26 @@ X:\HSA_ACC
 9096844HWChwc
 ```
 
+```
+电脑已安装
+VFP 8
+Visual Fox Pro 9
+NetAdvantageCOM51
+CrystalReport9.2
+VPM8 and VPM9
 
+安装
+Exgrid4
+Janus GridEx
+DevExpress
+```
+
+```
+Instances 界面
+	- 下面选择 Security
+	- 点击 Security groups
+		- Edit inbound rules
+```
 
 
 
