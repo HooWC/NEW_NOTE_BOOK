@@ -3,6 +3,11 @@ SELECT * FROM mitem WHERE item_id='hoo_testing'
 SELECT * FROM mctry
 SELECT * FROM mdriver
 SELECT * FROM mmakei
+SELECT * FROM mbc WHERE bc_id='BC25-00001'
+SELECT * FROM ppo
+SELECT * FROM dquot
+SELECT * FROM gdoc
+SELECT * FROM CurrencyCodes
 
 SELECT * FROM muom
 

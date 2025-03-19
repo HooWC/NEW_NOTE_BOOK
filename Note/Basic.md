@@ -317,7 +317,17 @@ CLOSE DATABASE
 
 
 ```
+Width
+Comments
+Format: !
+Tooltip Expression
 
+==
+
+Properties
+Integrity
+Code
+Help
 ```
 
 
