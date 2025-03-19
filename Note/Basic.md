@@ -286,9 +286,32 @@ Setup
 	- Item Master
 	- Name: Mitem.SCX
 	- RUN
+	
+	
+VPM Enterprise
+Microsoft Visual FoxPro 9
+```
+
+```
+
 ```
 
 
+
+### FoxPro 语法
+
+```
+create students
+LIST ALL
+CLEAR
+LIST NAME
+LIST NAME, RN
+BROWSE
+LIST OFF Name 输出（不显示字段名）
+
+SET HEADING OFF
+LIST NAME
+```
 
 
 

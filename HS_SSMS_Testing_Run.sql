@@ -1,4 +1,8 @@
 SELECT * FROM mitem WHERE item_id='abc'
+SELECT * FROM mitem WHERE item_id='hoo_testing'
+SELECT * FROM mctry
+SELECT * FROM mdriver
+SELECT * FROM mmakei
 
 SELECT * FROM muom
 
@@ -12,3 +16,7 @@ SELECT * FROM acc_audit_trail
 SELECT * FROM mbc
 SELECT * FROM pcndnapi
 SELECT * FROM mtax
+
+-- ERP Tables
+SELECT * FROM ldo
+SELECT * FROM map
