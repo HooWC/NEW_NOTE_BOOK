@@ -263,6 +263,34 @@ Build的结果：TRAILER_TYPE_ID C(50), TRAILER_TYPE_IF C(100), CREATEBY C(10), 
 现在LDO
 ```
 
+### Install_SRP (x)
+
+```
+- 192.168.1.15(X)
+	- Copy [HCV] to CDisk
+- Open ODBC Data
+	- 选择 System DSN
+		- Add
+			- SQL Server
+			- Name: HCVTruck, Des: HCVTruck, Server: 192.168.1.15 -> Next
+			- 打勾 With SQL
+			- Login ID: HCVTruck, Pass: hsonline -> Next
+			- 打勾 Change the default database to: HCVTruck -> Next -> Finish -> Test Data -> OK
+- Back to File
+	- Open HCV -> UpdateProgram
+		- Click HCV App
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### ===
