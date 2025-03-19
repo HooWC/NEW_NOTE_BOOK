@@ -1,5 +1,7 @@
 ### Create New Table
 
+#### Part 1
+
 - Create new table in SSMS and ERP SYSTEM (ACCOUNT)
 - Connection data auto save to SSMS
 - Create new table `Example` note document
@@ -144,6 +146,43 @@
 	- 找到HSG table -> 右键 Q
 	- 输入 SELECT * FROM ACC_DEPT
 	
-- Show Data (Success Testing!~)
+- Show Data (Success)
+```
+
+#### Part 2
+
+```
+==/
+
+- ERP(A)
+	- Tools -> Product Builder -> Build EXE
+	- EXE Name: HSGACC -> Build
+	- File -> Exit
+
+==/
+
+- OPEN 192.168.1.15(X)
+	- IHP_ACC
+		- Enter REPORTS
+			- Copy [Accounting] File
+	- HSG_ACC
+        - Delete ihpacc
+		- Enter REPORTS
+			- paste [Accounting] File
+				- open [acc_listing]
+				- Change Name: LIST OF ACCOUNTS FOR HSG SDN BHD
+				- (Menu)Database -> Set Database Location
+					- History -> 192.168.1.15
+						- User ID: HSG
+						- Password: hsonline
+						- Database: HSG
+						- Next -> Finish
+					- Click HSG
+						- Click dbo (3 table inside)
+							- acc_ap_inv_cndn_payment
+							- acc_ar_inv_cndn_receipt
+							- acc_dept
+						- 选择 acc_ap_inv_cndn_payment -> Update -> Close
+				- File -> Exit
 ```
 
