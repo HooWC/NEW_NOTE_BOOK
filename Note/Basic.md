@@ -311,17 +311,42 @@ LIST OFF Name 输出（不显示字段名）
 
 SET HEADING OFF
 LIST NAME
+CLOSE DATABASE
+```
+
+
+
+```
+
 ```
 
 
 
 
 
-
-
-
-
 ### ===
+
+```
+你的 ERP 学习方式
+✅ 你需要学习的重点
+如何打开和管理 ERP 项目（VPM Enterprise 9.1）
+如何编辑 ERP 里的表单（Forms）
+如何修改 ERP 数据库（DBF 表、SQL 查询）
+如何使用 FoxPro 语法，调整 ERP 业务逻辑
+如何运行和测试 ERP 功能
+```
+
+```
+你的 ERP 可能包含的文件
+项目文件（.PJX） → ERP 的 核心
+表（.DBF） → 存储数据，比如 客户、订单、库存
+表单（.SCX） → ERP 界面的按钮、文本框等
+报表（.FRX） → 生成发票、库存报表等
+代码（.PRG） → 业务逻辑，比如 订单处理、库存管理
+菜单（.MNX） → ERP 里上方的 菜单栏
+```
+
+
 
 ```
 1. check full time resigntion need how long to inform HR know
