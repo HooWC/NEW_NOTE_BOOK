@@ -281,7 +281,12 @@ Build的结果：TRAILER_TYPE_ID C(50), TRAILER_TYPE_IF C(100), CREATEBY C(10), 
 		- Click HCV App
 ```
 
-
+```
+Setup
+	- Item Master
+	- Name: Mitem.SCX
+	- RUN
+```
 
 
 
