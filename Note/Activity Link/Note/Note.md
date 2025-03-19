@@ -1,133 +1,8 @@
-```
-holidays
-打卡
+### Create New Table
 
-```
-
-```
-Update npm
-Update node
-Install ssms
-Configuration outlook
-Configuration git
-Install git
-Install typora
-Install zip
-Install Visual Studio 2022
-
-```
-
-```
-ssms: hsonline
-```
-
-```
-(?PKValue)
-(?FindState_Id)
-(?FindState_If)
-```
-
-```
-Data Builder
-	- ACCOUNT_RM
-	 - Find Object
-```
-
-```
-SQL build same name
-	- task
-```
-
-### ======
-
-### Add k1 no
-
-```
-(Account)
-Data Build
-	- ACCOUNT_RN
-		- Find Object
-			- (右键)Modify
-	- （Back）ACCOUNT
-		- Find Database Name -> Designer (出现model)
-			- （点击一个位置） Insert -> 输入 （Designer）
-			
-```
-
-### ======
-
-### Add User
-
-- `Account ERP Add User`
-
-```
-Run Application
-	- Admin -> Security -> Users
-		- 点击 Last 查看最后User的Number（10042），按NEW，输入新的Number（10043）
-		- ID输入HOO, FIRST: HOO, STAUTS: AH1, GROUP: AH1 -> 点击OK
-		- Admin -> password -> 放大镜Icon搜寻用户，确认第一次密码，
-		- 注：用户第一次登入，会要求用户自己更好密码
-		
-ID: Hoo
-P: 0844
-```
-
-
-
-```
-Current Taks:
-Install
-Learning
-
-```
-
-```
-192.1.1.8 -> IT_Documents -> IT -> Program Installation
-ERP Testing Account
-
-X:\HSA_ACC
-```
-
-```
-9096844HWChwc
-```
-
-```
-电脑已安装
-VFP 8
-Visual Fox Pro 9
-NetAdvantageCOM51
-CrystalReport9.2
-VPM8 and VPM9
-
-安装
-Exgrid4
-Janus GridEx
-DevExpress
-```
-
-```
-Instances 界面
-	- 下面选择 Security
-	- 点击 Security groups
-		- Edit inbound rules
-```
-
-```
-New Remote View
-	 - New View
-	 - （出现Models） 寻找你要的table
-```
-
-```
-mtrailer_type2
-```
-
-```
-SELECT trailer_type_id, trailer_type_if, createby, createdt, modifyby, modifydt FROM mtrailer_type2 WHERE trailer_type_id LIKE ?PKValue and trailer_type_id LIKE ?FindTrailer_Type_Id and trailer_type_if LIKE ?FindTrailer_Type_If
-
-Build的结果：TRAILER_TYPE_ID C(50), TRAILER_TYPE_IF C(100), CREATEBY C(10), CREATEDT T, MODIFYBY C(10), MODIFYDT T
-```
+- Create new table in SSMS and ERP SYSTEM (ACCOUNT)
+- Connection data auto save to SSMS
+- Create new table `Example` note document
 
 ```
 - Database
@@ -180,12 +55,20 @@ Build的结果：TRAILER_TYPE_ID C(50), TRAILER_TYPE_IF C(100), CREATEBY C(10), 
 				- 选择 system_main -> Build （出现Models）
 					- 点击 OK -> Save As 在 UpdateProgram/IHPACC_Application -> 换名字 HSGACC_Application, 保存
 		- 全部关闭
-			
+
+==/
+
 - 来到192.168.1.15(X) > HSG_ACC > UpdateProgram 删掉 IHPACC Application
+
+==/
+
 - 打开 ERP(A)
 	- Find Database
 		- Computer/(192.168.1.15)(X:)/HSG_ACC -> sacfpjd.pjd
 		- Open (HSG Sdn Bhd (Accounting) 1.01)
+		
+==/
+
 - 打开 Control Panel
 	- Administrative Tools
 		- ODBC Data Source Administrator (32-bit)
@@ -196,6 +79,9 @@ Build的结果：TRAILER_TYPE_ID C(50), TRAILER_TYPE_IF C(100), CREATEBY C(10), 
 				- Login ID: HSG , Password: ? -> Next
 				- 打勾 Change the default database to: HSG -> Next -> Finish
 				- 点击 Test Data -> ok -> ok -> ok
+				
+==/
+
 - 打开 ERP(A)
 	- Open/Close -> 出现信息(Project has been moved make x:\hsg_acc the new home directory) -> 点击 Yes
 	- (出现Models) -> saccfman -> Modify
@@ -236,7 +122,9 @@ Build的结果：TRAILER_TYPE_ID C(50), TRAILER_TYPE_IF C(100), CREATEBY C(10), 
 			- 右键 IHP PRIORITY MANAGEMENT SDN BHD -> Properties
 				- 把 Capition 旁边 换成 HSG SDN BHD -> X -> X -> Save
 	- Build Application
-	
+
+==/
+
 - SSMS
 	- InfoHP -> Table
 	- db0.acc_dept 右键 -> Script Default as -> CREATE To -> New Q
@@ -249,29 +137,13 @@ Build的结果：TRAILER_TYPE_ID C(50), TRAILER_TYPE_IF C(100), CREATEBY C(10), 
 			- Department #: -, Des: -, Remarks: 空
 			- Menu 按保存 -> 按x 关闭Models
 			- File -> Exit
-			
+
+==/
+
 - SSMS
 	- 找到HSG table -> 右键 Q
 	- 输入 SELECT * FROM ACC_DEPT
+	
+- Show Data (Success Testing!~)
 ```
-
-
-
-```
-看图片
-找excel文件
-现在LDO
-```
-
-
-
-### ===
-
-```
-1. check full time resigntion need how long to inform HR know
-```
-
-
-
-
 
