@@ -1,4 +1,9 @@
+USE InfoHSA;
+GO
+
+SELECT * FROM mitem
 SELECT * FROM mitem WHERE item_id='abc'
+SELECT * FROM mitem WHERE item_id='popo'
 SELECT * FROM mitem WHERE item_id='hoo_testing'
 SELECT * FROM mctry
 SELECT * FROM mdriver
@@ -8,6 +13,17 @@ SELECT * FROM ppo
 SELECT * FROM dquot
 SELECT * FROM gdoc
 SELECT * FROM CurrencyCodes
+SELECT * FROM mallocation
+SELECT * FROM mallocation WHERE allc_id='1'
+SELECT * FROM mbc
+-- SELECT * FROM mbc_hs
+-- SELCT * FROM mservice_seq
+SELECT * FROM mstock
+SELECT * FROM mdoc
+-- SELECT * FROM master_list
+SELECT * FROM mdoctype
+-- SELECT * FROM pic_attachment
+-- SELECT * FROM reporting_service
 
 SELECT * FROM muom
 
@@ -25,3 +41,4 @@ SELECT * FROM mtax
 -- ERP Tables
 SELECT * FROM ldo
 SELECT * FROM map
+SELECT * FROM MFLOCATION

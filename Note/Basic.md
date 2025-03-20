@@ -362,7 +362,45 @@ Help
 1. check full time resigntion need how long to inform HR know
 ```
 
+```
+了解
+```
+
+```
+1. Setup -> Item Master 
+(MITEM - Item Master)
+2. Setup -> Item Master (Serialize)
+(MITEM2 - Item Master For Serialize Item)
+3. Setup -> Allocation File
+(MALLOCATION - Allocation File)
+4. Setup -> Business Contact
+(MBC - Master Business Contact)
+5. Setup -> Chassis & Engine
+(MSTOCK - Chassis & Engine)
+6. Setup -> Document Master
+(MDOC - Document master)
+7. Setup -> Document Type
+(MDOCTYPE - Document Type)
+```
 
 
 
+
+
+
+
+
+
+
+
+```
+1. 换 Type ，SSMS也自动换 
+	- UOM ? (mitem)
+2. No Table
+	- Setup - Service item seq (mservice_seq)
+	- setup - consignment agreement (mbc_hs)
+	- setup - master summary list (master_list)
+3. MDOCTYPE
+	- doc type 两个是什么？区别？
+```
 
