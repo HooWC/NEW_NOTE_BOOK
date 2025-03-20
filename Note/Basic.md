@@ -402,5 +402,7 @@ Help
 	- setup - master summary list (master_list)
 3. MDOCTYPE
 	- doc type 两个是什么？区别？
+4. What is Called Objects
+5. Purchasing -> Batch... (No Table)
 ```
 

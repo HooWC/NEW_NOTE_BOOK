@@ -1,6 +1,15 @@
 USE InfoHSA;
 GO
 
+USE InfoHSA2;
+GO
+
+USE InfoHSCP;
+GO
+
+USE InfoHSCP;
+GO
+
 SELECT * FROM mitem
 SELECT * FROM mitem WHERE item_id='abc'
 SELECT * FROM mitem WHERE item_id='popo'
@@ -24,6 +33,17 @@ SELECT * FROM mdoc
 SELECT * FROM mdoctype
 -- SELECT * FROM pic_attachment
 -- SELECT * FROM reporting_service
+
+-- Purchasing
+SELECT * FROM ppo
+-- SELECT * FROM batchpo
+SELECT * FROM PPO
+
+-- Sales
+SELECT * FROM dso
+SELECT * FROM mheader
+
+
 
 SELECT * FROM muom
 
