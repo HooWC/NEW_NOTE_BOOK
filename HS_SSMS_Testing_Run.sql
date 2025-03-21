@@ -10,6 +10,8 @@ GO
 USE InfoHSCP;
 GO
 
+SELECT * FROM pbspo
+
 SELECT * FROM mitem
 SELECT * FROM mitem WHERE item_id='abc'
 SELECT * FROM mitem WHERE item_id='popo'
@@ -61,6 +63,21 @@ SELECT * FROM jscrap
 
 
 SELECT * FROM muom
+
+-- Store
+SELECT * FROM sir
+SELECT * FROM schgitem
+SELECT * FROM sgrn
+SELECT * FROM sfbc
+
+-- Shipping
+SELECT * FROM ldo
+
+-- Documentation
+
+-- Spare Parts
+
+
 
 -- Supplier Debit Note:
 SELECT * FROM gldata

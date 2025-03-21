@@ -456,5 +456,30 @@ Help
 (MCHASSIS_REG_NO - Chassis Registrartion Number)
 9. Production -> Chassis Movement History
 (MSTOCK2 -> For CHassis Movement History)
+
+解释
+```
+
+```
+1. Store -> Store Bin Card (没有在InfoHSA)
+(SBC - Store Bin Card)
+2. Store -> FG Bin Card
+(SFBC - Finish Good Bin Card)
+3. Store -> Store Issue & Receipt
+(Store - Store Issue and Receipt)
+4. Store -> Change Item/Nodel Group
+(SCHGITEM - Change Item or Model Group for Serialize Item)
+5. Store -> Good Receive Note
+(SGRN - Good Receive Note Item)
+
+解释
+```
+
+```
+1. Shipping -> Consignment Order 
+(LDO - Delivery Note)
+2. Shipping -> Unbilling CO
+
+解释
 ```
 
