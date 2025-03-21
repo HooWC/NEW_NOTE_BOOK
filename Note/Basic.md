@@ -396,13 +396,39 @@ Help
 ```
 1. 换 Type ，SSMS也自动换 
 	- UOM ? (mitem)
-2. No Table
+2. 【已解决】No Table
 	- Setup - Service item seq (mservice_seq)
 	- setup - consignment agreement (mbc_hs)
 	- setup - master summary list (master_list)
-3. MDOCTYPE
+	解决： 两个table link 起来的，在sql是找不到的。
+3. 【已解决】MDOCTYPE
 	- doc type 两个是什么？区别？
+	解决：询问了GPT，记录了笔记
 4. What is Called Objects
 5. Purchasing -> Batch... (No Table)
+	Production -> Job Order -> job (No Table)
+6. 【已解决】Setup -> Master setup -> branch (no show in doc) 
+	解决： Shared 的data 没有显示在纸
+```
+
+```
+1. Purchasing -> Purchase Order
+(PPO - PPO Item master fior Serialize Item)
+2. Purchasing -> Subcon P/O
+(PSPO - Purchasing - Subcon Purchase Order)
+其他两个找不到
+```
+
+```
+1. Sales -> Sales Quotation
+(DQUOT - Sales Quotation master)
+2. Sales -> Subcon P/O
+(DSO - Sales Order Master)
+3. Sales -> Setup -> Sales Header
+(MHEADER - Sales Header)
+4. Sales -> Setup -> Sales Description
+(MSALES_DESC - Sales Description)
+5. Sales -> Setup -> Rebuitt Header
+(MREBUILD_HEADER - Rebuild Header)
 ```
 

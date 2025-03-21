@@ -33,6 +33,8 @@ SELECT * FROM mdoc
 SELECT * FROM mdoctype
 -- SELECT * FROM pic_attachment
 -- SELECT * FROM reporting_service
+SELECT * FROM mbranch -- SHared Data
+-- SELECT * FROM pbspo
 
 -- Purchasing
 SELECT * FROM ppo
@@ -42,7 +44,20 @@ SELECT * FROM PPO
 -- Sales
 SELECT * FROM dso
 SELECT * FROM mheader
+SELECT * FROM mhead
+SELECT * FROM dso
 
+-- Production
+SELECT * FROM jchgeng
+-- SELECT * FROM job
+SELECT * FROM mchassism
+-- SELECT * FROM mchassism_do
+-- SELECT * FROM mstock_take
+SELECT * FROM jsdo
+-- SELECT * FROM mstock2
+SELECT * FROM jscrap
+-- SELECT * FROM mchassis_rec_no
+-- SELECT * FROM mchassis_recno
 
 
 SELECT * FROM muom

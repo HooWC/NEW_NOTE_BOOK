@@ -6,6 +6,8 @@ Document Master (MDOC - Document Master) 有图片，图片是这个 MDOC的，�
 Document Type (MDOCTYPE - Document Type) 有图片，图片是这个 mdoctype,解释
 ```
 
+### Setup
+
 ```
 【Setup】[ERP 9]
 
@@ -77,5 +79,55 @@ Isuzu NPR75
 Scania P-series
 Volvo FH16
 这些图片用于展示具体的卡车型号，可能和系统里的车辆数据库关联，方便查找特定型号的卡车。
+```
+
+### Purchasing
+
+```
+【Purchasing】[ERP 9]
+
+1. Purchase Order（PPO - 采购订单）是公司买入还是卖出？
+Purchasing -> Purchase Order
+
+采购订单（Purchase Order, PO）是公司向供应商买入物品，所以是公司买入。
+采购（Purchasing）就是公司花钱买原材料、零件或商品，以便用于生产或销售。
+👉 例子：
+公司生产汽车零件，需要购买钢板。
+
+公司向供应商A购买100吨钢板。
+供应商A提供报价，公司同意价格后，创建采购订单（PO）。
+供应商A收到采购订单后，安排发货，并开具发票。
+公司收到钢板后，入库并付款给供应商A。
+✅ 总结：
+
+采购订单（PPO）= 公司向外部供应商买东西的订单。
+不是卖出，而是买入！
+
+==////////
+
+2. Subcon P/O（PSPO - 外包采购订单）例子
+Purchasing -> Subcon P/O
+
+Subcon（Subcontracting）是外包，意思是公司把部分生产流程交给外部供应商处理，然后再取回产品。
+👉 例子：
+公司生产发动机外壳，但需要外包喷漆。
+
+公司生产了100个发动机外壳，但没有喷漆设备。
+公司联系外包供应商B，让他们帮忙喷漆。
+公司创建 Subcon P/O（外包采购订单），注明：
+发送100个发动机外壳给供应商B。
+供应商B负责喷漆，每个收费RM10，总价RM1000。
+供应商B完成喷漆后，把外壳送回来，公司付款给供应商B。
+✅ 总结：
+
+Subcon P/O = 外包加工的订单（不是买东西，而是买服务）。
+PPO 是买原材料，PSPO 是外包加工，两者不同！
+```
+
+### Sales
+
+```
+【Sales】[ERP 9]
+
 ```
 
