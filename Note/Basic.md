@@ -430,5 +430,7 @@ Help
 (MSALES_DESC - Sales Description)
 5. Sales -> Setup -> Rebuitt Header
 (MREBUILD_HEADER - Rebuild Header)
+
+解释这些在ERP是做什么的？
 ```
 
