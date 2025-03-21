@@ -394,8 +394,9 @@ Help
 
 
 ```
-1. 换 Type ，SSMS也自动换 
+1. 【已解决】换 Type ，SSMS也自动换 
 	- UOM ? (mitem)
+	解决： 要在SSMS换，才在ERP更换，不能自动的
 2. 【已解决】No Table
 	- Setup - Service item seq (mservice_seq)
 	- setup - consignment agreement (mbc_hs)
@@ -404,9 +405,11 @@ Help
 3. 【已解决】MDOCTYPE
 	- doc type 两个是什么？区别？
 	解决：询问了GPT，记录了笔记
-4. What is Called Objects
-5. Purchasing -> Batch... (No Table)
+4. 【已解决】What is Called Objects
+	解决： 连接关系的Table的意思
+5. 【已解决】Purchasing -> Batch... (No Table)
 	Production -> Job Order -> job (No Table)
+	解决： 一些公司的 Database Table 是没有使用的 Function
 6. 【已解决】Setup -> Master setup -> branch (no show in doc) 
 	解决： Shared 的data 没有显示在纸
 ```
@@ -432,5 +435,26 @@ Help
 (MREBUILD_HEADER - Rebuild Header)
 
 解释这些在ERP是做什么的？
+```
+
+```
+1. Production -> Job Order (没有在InfoHSA)
+(JOB - Job Order Details)
+2. Production -> Change Engine
+(JCHGENG - Change ENgine)
+3. Production -> Chasis Movement 5
+(MCHASSISM - Master Chassis Movement)
+4. Production -> Scrap Reporting
+(JSCRAP - Scrap Repporting)
+5. Production -> Subcon D/O
+(JSDO - Subcon Deleivery Order)
+6. Production -> Chasis Movement
+(MCHASSISM - Master CHassis Movement)
+7. Production -> Chasis Movement (After Open DO) (没有在InfoHSA)
+(MCHASSIS_DO - Master Chassis Movement - After open DO) 
+8. Production -> Chassis Registration No (没有在InfoHSA)
+(MCHASSIS_REG_NO - Chassis Registrartion Number)
+9. Production -> Chassis Movement History
+(MSTOCK2 -> For CHassis Movement History)
 ```
 
