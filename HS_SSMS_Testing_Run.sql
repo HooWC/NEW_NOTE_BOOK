@@ -74,10 +74,11 @@ SELECT * FROM sfbc
 SELECT * FROM ldo
 
 -- Documentation
+SELECT * FROM gplanloan
 
 -- Spare Parts
-
-
+SELECT * FROM currency
+SELECT * FROM MITEMGROUP
 
 -- Supplier Debit Note:
 SELECT * FROM gldata

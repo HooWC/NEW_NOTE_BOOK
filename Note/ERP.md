@@ -238,8 +238,6 @@ Sales Description 存储订单的详细商品信息（见下图对比）。
 | Sales Description | MSALES_DESC     | 订单的详细商品信息（如产品、数量、单价） |
 | Rebuild Header    | MREBUILD_HEADER | 用于修复或重建订单数据                   |
 
-
-
 ### Production
 
 ```
@@ -363,13 +361,7 @@ Production（生产）模块功能解析
 | **涉及客户订单？**          | ❌ 否，仅限内部调动                | ✅ 是，和客户发货有关                                |
 | **示例场景**                | 底盘在车间/仓库之间移动           | 底盘发往客户/外包商                                 |
 
-
-
 ### Store
-
-```
-Store Bin Card（仓库物料卡 - SBC） 解释，给例子
-```
 
 ```
 【Store】[ERP 9]
@@ -448,8 +440,6 @@ SGRN 记录 480 个轮胎入库，并通知采购部门要求供应商补货或�
 | **Change Item/Model Group**   | 更改物料分类或产品型号             | 旧型号 ABC-100 升级为 ABC-200    |
 | **Good Receive Note（SGRN）** | 记录采购物料的收货情况             | 采购 500 个轮胎，实际收到 480 个 |
 
-
-
 ### Shipping
 
 ```
@@ -502,8 +492,6 @@ Unbilling CO 里会显示这 20 台摩托车，提醒财务跟进。
 | **Consignment Order（LDO）** | 记录寄售商品的发货   | 先发 50 台摩托车给客户 A，等卖掉后才付款        |
 | **Unbilling CO**             | 追踪未开票的寄售订单 | 发现客户 A 还有 20 台摩托车未付款，提醒财务催款 |
 
-
-
 ### Documentation
 
 ```
@@ -555,8 +543,6 @@ File（车辆文件管理）
 主要用于管理与车辆相关的所有文件，包括注册证书、保险文件、维修记录等。
 例子：一辆商用卡车的保险单、维修记录等文件会存储在这里，便于随时查阅。
 ```
-
-
 
 ### Spare Parts
 
@@ -617,11 +603,13 @@ Report（报表）
 	示例：查看上个月卖出了多少个轮胎，每个客户购买了多少。
 ```
 
-
+### Service
 
 ```
 【Service】[ERP 9] Nothing
 ```
+
+### Accounting
 
 ```
 【Accounting】[ERP 9]
@@ -662,20 +650,22 @@ Accounting（财务模块）解析
 适用于财务管理员进行初始设置或调整系统参数。
 ```
 
+### Reports
+
 ```
 【Reports】[ERP 9]
 ```
+
+### Admin
 
 ```
 【Admin】[ERP 9]
 ```
 
-```
-【Window】[ERP 9]
-```
+### Window
 
 ```
-【Help】[ERP 9]
+【Window】[ERP 9]
 ```
 
 
