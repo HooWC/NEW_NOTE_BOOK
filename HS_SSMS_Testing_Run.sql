@@ -14,6 +14,10 @@ SELECT * FROM pbspo
 
 SELECT * FROM mitem
 SELECT * FROM mitem WHERE item_id='abc'
+UPDATE mitem
+SET item_if='333'
+WHERE item_id='abc'
+
 SELECT * FROM mitem WHERE item_id='popo'
 SELECT * FROM mitem WHERE item_id='hoo_testing'
 SELECT * FROM mctry
