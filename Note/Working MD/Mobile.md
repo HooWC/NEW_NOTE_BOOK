@@ -137,7 +137,224 @@ http://hongsenghq.ddns.net:4200/users/authenticate
 
 
 ```
+1. 每次去下一页的时候，那个加载中换成因为 Loading...
+2. 那个 PlanListing的Body Type的apidata太长了，你能不能弄自动换行，要美观的
+3. 然后在PlanDetails 右上角的plan按钮再美化
+4. A4 和 Letter 是一个select，默认是A4
+```
 
+```
+1. PlanListing的search我要可以search全部。
+plan_id
+model_id
+body_type
+bdm
+wheelbase
+2. body_type还是一样不好看，自动换行，两行，句子不要去到左边，尽量给一个固定的大小，padding，后面就overview
+
+3. 那个A4和Letter的界面，如果你可以弄到的话，就弄一个把Plan Details显示，然后可以print出来的，手机的我没有试过print，就是连接一个设备这样的。。。
+
+这是以前别人用flutter写的代码，不知道react native可不可以？但是不能就不能吧
+
+import 'dart:io';
+import 'dart:convert';
+
+import 'package:flutter/material.dart';
+import 'package:hsa_app/models/plan.dart';
+import 'package:pdf/pdf.dart';
+import 'package:printing/printing.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:http/http.dart' as http;
+import 'package:hsa_app/config.dart';
+import 'package:flutter/services.dart';
+
+class PdfNewScreen extends StatefulWidget {
+  const PdfNewScreen({super.key, required this.plan});
+
+  final Plan plan;
+  @override
+  State<StatefulWidget> createState() {
+    return _PdfNewScreen();
+  }
+}
+
+class _PdfNewScreen extends State<PdfNewScreen> {
+  String displayData = 'Loading...';
+  String myContent = '';
+  File? urlFile;
+  String? fileDir = '';
+  Uint8List? bytes;
+
+  // late PDFViewController _pdfViewController;
+
+/*   void requestPersmission() async {
+    PermissionStatus permission =
+        await Permission.manageExternalStorage.request();
+    if (permission == PermissionStatus.granted) {
+      // print("granted");
+    }
+    if (permission == PermissionStatus.denied) {
+      // print("denied");
+    }
+    if (permission == PermissionStatus.permanentlyDenied) {
+      openAppSettings();
+    }
+  } */
+
+  Future<Uint8List?> _loadPdfFile() async {
+    final id = widget.plan.id;
+
+    try {
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      final token = prefs.getString('token');
+      final uri = Uri.http(url2, '/plans/$id');
+
+      final response = await http.get(
+        uri,
+        headers: {
+          HttpHeaders.authorizationHeader: 'Bearer $token',
+          HttpHeaders.contentTypeHeader: 'application/json',
+        },
+      );
+
+      final fetchedData = jsonDecode(response.body);
+
+      myContent = fetchedData['content'];
+
+      bytes = base64.decode(myContent);
+
+      // print('File size: + ${bytes!.lengthInBytes}');
+
+      return bytes;
+    } catch (error) {
+      throw 'Error to load PDF file';
+    }
+  }
+
+  @override
+  void initState() {
+    // requestPersmission();
+    // _loadPdf();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          widget.plan.planId,
+          style: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: Colors.blue[600],
+      ),
+      body: FutureBuilder<Uint8List?>(
+        future: _loadPdfFile(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return InteractiveViewer(
+              child: PdfPreview(
+                maxPageWidth: width < 600 ? width : width - 100,
+                initialPageFormat: PdfPageFormat.a4,
+                build: (format) => snapshot.data!,
+              ),
+            );
+          }
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        },
+        // child: PdfPreview(
+        //   maxPageWidth: 700,
+        //   build: (format) => _loadPdfFile(),
+        // ),
+      ),
+    );
+  }
+}
+```
+
+```
+1. print 那一页给loading就可以了，不要给错误
+2. 
+```
+
+```
+1. 在hsaapi node api 的项目开新的一个api连接，我们已经有了users, weightCerts, plans。 根据公司老板的要求 添加一个新的cmd文件夹，写cmd.service.js , cmd.controller.js， 代码写法就跟users, weightCerts, plans这些文件一样就可以了。
+
+2. 在server里，api的link你写  cmh,例如：http://10.10.10.14:5000/cmh
+
+3. 在database 这个table的名字是 mstock ,SELECT * FROM mstock
+
+属性有
+id
+stock_id
+internal_id
+item_id
+mgroup_id
+fg_id
+quot_id
+ddate
+po_id
+poi_id
+vendor
+status
+so_id
+so_id
+location
+arrivedt
+acc_arrivedt
+sir
+siri
+grn_id
+grni_id
+job_id
+do_id
+doi_id
+customer
+p_status
+remark
+service
+contra
+obsolete
+com_no
+m_reg_no
+code
+corigin_if
+pcode
+porigin_if
+containercs_id
+containercb_id
+inv_no_cs
+inv_no_cb
+picloc1
+picloc2
+print_qty
+selectbit
+createby
+createdt
+modifyby
+modifydt
+timemark
+identitymark
+```
+
+```
+api_getAllMstock
+api_getMstockByChassis
+```
+
+```
+修改代码，api_getAllmstock是拿全部cmh数据的，api_getmstockBychassis是byid的，我只要getAll和找id而已。只修改cmh的代码
+```
+
+```
+使用 Tric（）
 ```
 
 
@@ -148,6 +365,7 @@ http://hongsenghq.ddns.net:4200/users/authenticate
 http://10.0.2.2:4200/users/authenticate 
 http://10.0.2.2:5000/users/authenticate 
 http://hongsenghq.ddns.net:4200/users/authenticate 
+http://10.10.10.14:5000/plans
 ```
 
 可能
