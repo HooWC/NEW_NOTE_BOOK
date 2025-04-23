@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Menu Modal</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Open IT</h1>
+        <button class="open-button">Open Menu</button>
+    </div>
+
+    <div class="modal-overlay" id="menuModal">
+        <div class="game-container">
+            <div class="close-button" id="closeButton"></div>
+            <div class="status-bar">
+                <div class="level-info">UID: A571</div>
+            </div>
+            
+            <div class="game-screen">
+                <div class="icon-grid">
+                    <!-- Row 1 -->
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-bag-shopping"></i>
+                        <div class="icon-name">商店</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-user-group"></i>
+                        <div class="icon-name">好友</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-clipboard-list"></i>
+                        <div class="icon-name">委托</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-briefcase"></i>
+                        <div class="icon-name">档案</div>
+                    </div>
+                    
+                    <!-- Row 2 -->
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-heart"></i>
+                        <div class="icon-name">旅情事记</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-gem"></i>
+                        <div class="icon-name">合成</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-trophy"></i>
+                        <div class="icon-name">成就</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-comment"></i>
+                        <div class="icon-name">短信</div>
+                    </div>
+                    
+                    <!-- Row 3 -->
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-seedling"></i>
+                        <div class="icon-name">无名勋礼</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-star"></i>
+                        <div class="icon-name">联盟</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-user"></i>
+                        <div class="icon-name">角色</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-compass"></i>
+                        <div class="icon-name">指南</div>
+                    </div>
+                    
+                    <!-- Row 4 -->
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-users"></i>
+                        <div class="icon-name">编队</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-box"></i>
+                        <div class="icon-name">背包</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-clipboard"></i>
+                        <div class="icon-name">任务</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-lightbulb"></i>
+                        <div class="icon-name">提示</div>
+                    </div>
+                    
+                    <!-- Row 5 (bottom row) -->
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-gears"></i>
+                        <div class="icon-name">设置</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-power-off"></i>
+                        <div class="icon-name">退出</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

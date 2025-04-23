@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Menu Modal</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./icon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Open IT</h1>
+        <button class="open-button">Open Menu</button>
+    </div>
+
+    <div class="modal-overlay" id="menuModal">
+        <div class="game-container">
+            <div class="close-button" id="closeButton"></div>
+            <div class="status-bar">
+                <div class="level-info">UID: A571</div>
+            </div>
+            
+            <div class="game-screen">
+                <div class="icon-grid">
+                    <!-- Row 1 -->
+                    <div class="game-icon">
+                        <i class="icon-image menu-icon tf-icons bx bx-home-smile"></i>
+                        <div class="icon-name">Dashboard</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-ban"></i>
+                        <div class="icon-name">Blacklist</div>
+                    </div>
+                    <div class="game-icon wide-icon">
+                        <i class="icon-image fa-solid fa-user-shield"></i>
+                        <div class="icon-name">Profile</div>
+                    </div>
+                    
+                    <!-- Row 2 -->
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-triangle-exclamation"></i>
+                        <div class="icon-name">Incident</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-paper-plane"></i>
+                        <div class="icon-name">Request</div>
+                    </div>
+                    <div class="game-icon wide-icon">
+                        <i class="icon-image fa-solid fa-comment-dots"></i>
+                        <div class="icon-name">Feedback</div>
+                    </div>
+                    
+                    <!-- Row 3 -->
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-plus-circle"></i>
+                        <div class="icon-name">New Incident</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-file-circle-plus"></i>
+                        <div class="icon-name">New Request</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-user"></i>
+                        <div class="icon-name">Personal</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-list-check"></i>
+                        <div class="icon-name">Todo</div>
+                    </div>
+                    
+                    <!-- Row 4 -->
+                    <div class="game-icon wide-icon">
+                        <i class="icon-image fa-solid fa-book"></i>
+                        <div class="icon-name">Knowledge</div>
+                    </div>
+                    <div class="game-icon wide-icon">
+                        <div class="notification">1</div>
+                        <i class="icon-image fa-solid fa-bell"></i>
+                        <div class="icon-name">Announcement</div>
+                    </div>
+                    
+                    <!-- Row 5 -->
+                    <div class="game-icon wide-icon">
+                        <i class="icon-image fa-solid fa-circle-info"></i>
+                        <div class="icon-name">About ITSM</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-question-circle"></i>
+                        <div class="icon-name">FAQ</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-lightbulb"></i>
+                        <div class="icon-name">Version</div>
+                    </div>
+                    
+                    <!-- Row 6 (bottom row) -->
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-gears"></i>
+                        <div class="icon-name">Setting</div>
+                    </div>
+                    <div class="game-icon">
+                        <i class="icon-image fa-solid fa-power-off"></i>
+                        <div class="icon-name">Log Out</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const openButton = document.querySelector('.open-button');
+            const closeButton = document.getElementById('closeButton');
+            const modal = document.getElementById('menuModal');
+            const gameIcons = document.querySelectorAll('.game-icon');
+            const body = document.body;
+
+            // Open modal when the open button is clicked
+            openButton.addEventListener('click', function() {
+                modal.classList.add('active_open_menu');
+                body.classList.add('menu-open');
+                
+                // Add animation delay to make it feel more polished
+                setTimeout(() => {
+                    modal.style.transition = 'opacity 0.3s ease';
+                }, 500);
+            });
+
+            // Close modal when the close button is clicked
+            closeButton.addEventListener('click', function() {
+                closeMenu();
+            });
+
+            // Close modal when clicking outside the game container
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeMenu();
+                }
+            });
+
+            // Function to close menu with animation
+            function closeMenu() {
+                // First slide out the container
+                const container = modal.querySelector('.game-container');
+                container.style.transform = 'translateX(100%)';
+                
+                // Then fade out the overlay
+                setTimeout(() => {
+                    modal.classList.remove('active_open_menu');
+                    body.classList.remove('menu-open');
+                    
+                    // Reset transform after animation completes
+                    setTimeout(() => {
+                        container.style.transform = '';
+                    }, 300);
+                }, 300);
+            }
+
+            // Add click effect to game icons
+            gameIcons.forEach(icon => {
+                icon.addEventListener('click', function() {
+                    // Remove active class from all icons
+                    gameIcons.forEach(i => i.classList.remove('active_open_menu'));
+                    
+                    // Add active class to clicked icon
+                    this.classList.add('active_open_menu');
+                    
+                    // Add a subtle press animation
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+            
+            // Add keyboard support (Escape key to close)
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('active_open_menu')) {
+                    closeMenu();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
