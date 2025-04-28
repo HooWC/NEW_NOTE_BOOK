@@ -1,0 +1,146 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Task management</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="task-container">
+      <ul class="task-list">
+        <li class="task-column task-column-on-hold">
+          <span class="task-column-header">
+            <h2>Ideas/tasks</h2>
+          </span>
+          <div class="task-input">
+            <input type="text" placeholder="Add an issue" @keyup.enter="addIssue('tasks')" v-model="create.tasks">
+          </div>
+          <ul class="task-inner-list" id="tasks">
+            <li v-for="item in tasks" class="task-item">
+              <h1>{{item.name}}</h1>
+              <span class="task-time">{{item.billed}} / {{item.estimate}}</span>
+              <div id="clockdiv"></div>
+              <div class="assigned-members">
+                <div class="text">Assigned to</div>
+                <div class="member-list">
+                  <div v-for="member in displayMembers(item.assigned)" class="member-avatar">
+                    <img :src="member.avatar" alt="Team Member">
+                    <div class="member-role">{{ member.role }}</div>
+                  </div>
+                  <div v-if="hasMoreMembers(item.assigned)" class="more-members">
+                    +{{ getMoreMembersCount(item.assigned) }}
+                  </div>
+                </div>
+              </div>
+              <button class="track-task" @click="!item.tracked ? trackTask(item) : stopTask(item)">
+                <i class="material-icons" v-if="!item.tracked">play_arrow</i>
+                <i class="material-icons" v-if="item.tracked">pause</i>
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="task-column task-column-in-progress">
+          <span class="task-column-header">
+          <h2>In Progress</h2>
+        </span>
+          <div class="task-input">
+            <input type="text" placeholder="Add an issue" @keyup.enter="addIssue('inprogress')" v-model="create.inprogress">
+          </div>
+          <ul class="task-inner-list" id="inprogress">
+            <li v-for="item in inprogress" class="task-item">
+              <h1>{{item.name}}</h1>
+              <span class="task-time">{{item.billed}} / {{item.estimate}}</span>
+              <div class="assigned-members">
+                <div class="text">Assigned to</div>
+                <div class="member-list">
+                  <div v-for="member in displayMembers(item.assigned)" class="member-avatar">
+                    <img :src="member.avatar" alt="Team Member">
+                    <div class="member-role">{{ member.role }}</div>
+                  </div>
+                  <div v-if="hasMoreMembers(item.assigned)" class="more-members">
+                    +{{ getMoreMembersCount(item.assigned) }}
+                  </div>
+                </div>
+              </div>
+              <button class="track-task" @click="!item.tracked ? trackTask(item) : stopTask(item)">
+                <i class="material-icons" v-if="!item.tracked">play_arrow</i>
+                <i class="material-icons" v-if="item.tracked">pause</i>
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="task-column task-column-needs-review">
+          <span class="task-column-header">
+          <h2>Needs Review</h2>
+        </span>
+          <div class="task-input">
+            <input type="text" placeholder="Add an issue" @keyup.enter="addIssue('review')" v-model="create.review">
+          </div>
+          <ul class="task-inner-list" id="review">
+            <li v-for="item in review" class="task-item">
+              <h1>{{item.name}}</h1>
+              <span class="task-time">{{item.billed}} / {{item.estimate}}</span>
+              <div class="assigned-members">
+                <div class="text">Assigned to</div>
+                <div class="member-list">
+                  <div v-for="member in displayMembers(item.assigned)" class="member-avatar">
+                    <img :src="member.avatar" alt="Team Member">
+                    <div class="member-role">{{ member.role }}</div>
+                  </div>
+                  <div v-if="hasMoreMembers(item.assigned)" class="more-members">
+                    +{{ getMoreMembersCount(item.assigned) }}
+                  </div>
+                </div>
+              </div>
+              <button class="track-task" @click="!item.tracked ? trackTask(item) : stopTask(item)">
+                <i class="material-icons" v-if="!item.tracked">play_arrow</i>
+                <i class="material-icons" v-if="item.tracked">pause</i>
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="task-column task-column-approved">
+          <span class="task-column-header">
+            <h2>Approved</h2>
+          </span>
+          <div class="task-input">
+            <input type="text" placeholder="Add an issue" @keyup.enter="addIssue('approved')" v-model="create.approved">
+          </div>
+          <ul class="task-inner-list" id="approved">
+            <li v-for="item in approved" class="task-item">
+              <h1>{{item.name}}</h1>
+              <span class="task-time">{{item.billed}} / {{item.estimate}}</span>
+              <div class="assigned-members">
+                <div class="text">Assigned to</div>
+                <div class="member-list">
+                  <div v-for="member in displayMembers(item.assigned)" class="member-avatar">
+                    <img :src="member.avatar" alt="Team Member">
+                    <div class="member-role">{{ member.role }}</div>
+                  </div>
+                  <div v-if="hasMoreMembers(item.assigned)" class="more-members">
+                    +{{ getMoreMembersCount(item.assigned) }}
+                  </div>
+                </div>
+              </div>
+              <button class="track-task" @click="!item.tracked ? trackTask(item) : stopTask(item)">
+                <i class="material-icons" v-if="!item.tracked">play_arrow</i>
+                <i class="material-icons" v-if="item.tracked">pause</i>
+              </button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

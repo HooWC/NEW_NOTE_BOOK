@@ -35,7 +35,7 @@ body {
     min-height: 100vh;
 }
 
-.container {
+.inc-cre-container {
     width: 100%;
     margin: 0 auto;
     background-color: var(--card-bg);
@@ -45,7 +45,7 @@ body {
 }
 
 /* Header Styles - Keeping 100% width */
-.header {
+.inc-cre-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,13 +56,13 @@ body {
     width: 100%;
 }
 
-.header-left {
+.inc-cre-header-left {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.back-button, .menu-button {
+.inc-cre-back-button, .inc-cre-menu-button {
     background-color: var(--input-bg);
     border: 1px solid var(--input-border);
     color: var(--text-color);
@@ -77,31 +77,31 @@ body {
     transition: background-color 0.2s;
 }
 
-.back-button:hover, .menu-button:hover {
+.inc-cre-back-button:hover, .inc-cre-menu-button:hover {
     background-color: var(--btn-hover);
 }
 
-.title-group {
+.inc-cre-title-group {
     margin-left: 5px;
 }
 
-.title {
+.inc-cre-title {
     font-size: 16px;
     font-weight: 600;
 }
 
-.subtitle {
+.inc-cre-subtitle {
     font-size: 12px;
     color: var(--text-muted);
 }
 
-.header-right {
+.inc-cre-header-right {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.btn {
+.inc-cre-btn {
     padding: 8px 16px;
     border-radius: var(--border-radius);
     font-size: 14px;
@@ -114,7 +114,7 @@ body {
     gap: 5px;
 }
 
-.btn-icon {
+.inc-cre-btn-icon {
     background-color: transparent;
     color: var(--text-color);
     width: 32px;
@@ -122,69 +122,69 @@ body {
     padding: 0;
 }
 
-.btn-icon:hover {
+.inc-cre-btn-icon:hover {
     background-color: var(--btn-hover);
 }
 
-.btn-submit {
+.inc-cre-btn-submit {
     background-color: var(--submit-btn);
     color: white;
     border: none;
 }
 
-.btn-resolve {
+.inc-cre-btn-resolve {
     background-color: var(--resolve-btn);
     color: white;
     border: none;
 }
 
-.btn-submit:hover, .btn-resolve:hover {
+.inc-cre-btn-submit:hover, .inc-cre-btn-resolve:hover {
     filter: brightness(1.1);
 }
 
 /* Form Styles */
-.form-wrapper {
+.inc-cre-form-wrapper {
     padding: 24px;
     max-width: var(--content-max-width);
     margin: 0 auto;
 }
 
-.incident-form {
+.inc-cre-incident-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.form-grid {
+.inc-cre-form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
 }
 
-.form-column {
+.inc-cre-form-column {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.form-group {
+.inc-cre-form-group {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-.form-label {
+.inc-cre-form-label {
     font-size: 14px;
     font-weight: 500;
     color: var(--text-muted);
 }
 
-.required:after {
+.inc-cre-required:after {
     content: " *";
     color: #ff4d4f;
 }
 
-.form-control {
+.inc-cre-form-control {
     width: 100%;
     padding: 8px 12px;
     background-color: var(--input-bg);
@@ -196,7 +196,7 @@ body {
     height: var(--input-height);
 }
 
-select.form-control {
+select.inc-cre-form-control {
     appearance: none;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238e9299' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
     background-repeat: no-repeat;
@@ -205,23 +205,23 @@ select.form-control {
     padding-right: 36px;
 }
 
-.form-control:focus {
+.inc-cre-form-control:focus {
     border-color: var(--blue-accent);
     outline: none;
 }
 
-.input-with-icon {
+.inc-cre-input-with-icon {
     position: relative;
     display: flex;
     width: 100%;
 }
 
-.input-with-icon .form-control {
+.inc-cre-input-with-icon .inc-cre-form-control {
     padding-right: 36px;
     width: 100%;
 }
 
-.icon-search {
+.inc-cre-icon-search {
     position: absolute;
     right: 0;
     top: 0;
@@ -236,24 +236,24 @@ select.form-control {
     cursor: pointer;
 }
 
-.short-description-group {
+.inc-cre-short-description-group {
     margin-top: 8px;
     grid-column: 1 / -1; /* Make it span both columns */
 }
 
-.input-with-actions {
+.inc-cre-input-with-actions {
     display: flex;
     position: relative;
     width: 100%;
 }
 
-.input-with-actions .form-control {
+.inc-cre-input-with-actions .inc-cre-form-control {
     flex-grow: 1;
     padding-right: 76px; /* Space for action buttons */
     width: 100%;
 }
 
-.action-buttons {
+.inc-cre-action-buttons {
     position: absolute;
     right: 0;
     top: 0;
@@ -264,7 +264,7 @@ select.form-control {
     padding-right: 8px;
 }
 
-.btn-help {
+.inc-cre-btn-help {
     background: transparent;
     border: none;
     color: var(--text-muted);
@@ -277,21 +277,21 @@ select.form-control {
     border-radius: var(--border-radius);
 }
 
-.btn-help:hover {
+.inc-cre-btn-help:hover {
     background-color: var(--btn-hover);
 }
 
-.full-width {
+.inc-cre-full-width {
     grid-column: 1 / -1;
 }
 
-.description-textarea {
+.inc-cre-description-textarea {
     resize: vertical;
     min-height: 100px;
     width: 100%;
 }
 
-.priority-display {
+.inc-cre-priority-display {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -303,25 +303,25 @@ select.form-control {
     height: var(--input-height);
 }
 
-.priority-value {
+.inc-cre-priority-value {
     color: var(--blue-highlight);
     text-decoration: underline;
     cursor: pointer;
     flex-grow: 1;
 }
 
-.info-icon {
+.inc-cre-info-icon {
     color: var(--text-muted);
 }
 
-.related-search-container {
+.inc-cre-related-search-container {
     text-align: center;
     padding: 0 24px 24px;
     max-width: var(--content-max-width);
     margin: 0 auto;
 }
 
-.btn-related-search {
+.inc-cre-btn-related-search {
     background-color: var(--input-bg);
     color: var(--text-color);
     display: inline-flex;
@@ -329,24 +329,24 @@ select.form-control {
     gap: 8px;
 }
 
-.btn-related-search:hover {
+.inc-cre-btn-related-search:hover {
     background-color: var(--btn-hover);
 }
 
-.tab-section {
+.inc-cre-tab-section {
     padding: 0 24px 24px;
     max-width: var(--content-max-width);
     margin: 0 auto;
 }
 
-.tabs {
+.inc-cre-tabs {
     display: flex;
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
     overflow: hidden;
 }
 
-.tab {
+.inc-cre-tab {
     padding: 12px 20px;
     background-color: var(--input-bg);
     color: var(--text-color);
@@ -359,38 +359,38 @@ select.form-control {
     text-align: center;
 }
 
-.tab:not(:first-child) {
+.inc-cre-tab:not(:first-child) {
     display: none;
 }
 
-.tab:hover {
+.inc-cre-tab:hover {
     background-color: var(--btn-hover);
 }
 
-.tab.active {
+.inc-cre-tab.active {
     background-color: var(--tab-active);
     color: var(--blue-highlight);
     border-bottom: 2px solid var(--blue-highlight);
 }
 
-.tab-content {
+.inc-cre-tab-content {
     background-color: var(--input-bg);
     padding: 20px;
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
 }
 
-.tab-pane {
+.inc-cre-tab-pane {
     display: none;
     flex-direction: column;
     gap: 16px;
 }
 
-.tab-pane.active {
+.inc-cre-tab-pane.active {
     display: flex;
 }
 
-.watch-list, .work-notes-list {
+.inc-cre-watch-list, .inc-cre-work-notes-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -398,12 +398,12 @@ select.form-control {
     font-size: 14px;
 }
 
-.list-actions {
+.inc-cre-list-actions {
     display: flex;
     gap: 4px;
 }
 
-.icon-button {
+.inc-cre-icon-button {
     background-color: var(--input-bg);
     border: 1px solid var(--input-border);
     color: var(--text-color);
@@ -416,11 +416,11 @@ select.form-control {
     cursor: pointer;
 }
 
-.icon-button:hover {
+.inc-cre-icon-button:hover {
     background-color: var(--btn-hover);
 }
 
-.notes-textarea {
+.inc-cre-notes-textarea {
     width: 100%;
     padding: 10px;
     background-color: var(--input-bg);
@@ -431,22 +431,22 @@ select.form-control {
     min-height: 80px;
 }
 
-.work-notes-textarea {
+.inc-cre-work-notes-textarea {
     background-color: var(--warning-bg);
 }
 
-.notes-group {
+.inc-cre-notes-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.notes-group label {
+.inc-cre-notes-group label {
     font-size: 14px;
     color: var(--text-muted);
 }
 
-.form-footer {
+.inc-cre-form-footer {
     padding: 16px 24px;
     border-top: 1px solid var(--input-border);
     background-color: var(--card-bg);
@@ -454,78 +454,78 @@ select.form-control {
     width: 100%;
 }
 
-.footer-buttons {
+.inc-cre-footer-buttons {
     display: flex;
     gap: 10px;
     max-width: var(--content-max-width);
     margin: 0 auto;
 }
 
-.btn-submit-footer, .btn-resolve-footer {
+.inc-cre-btn-submit-footer, .inc-cre-btn-resolve-footer {
     background-color: var(--input-bg);
     color: var(--text-color);
 }
 
-.btn-submit-footer:hover, .btn-resolve-footer:hover {
+.inc-cre-btn-submit-footer:hover, .inc-cre-btn-resolve-footer:hover {
     background-color: var(--btn-hover);
 }
 
 /* Enhanced Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     /* Switch to one column layout */
-    .form-grid {
+    .inc-cre-form-grid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
     
     /* Adjust padding for smaller screens */
-    .form-wrapper,
-    .related-search-container,
-    .tab-section {
+    .inc-cre-form-wrapper,
+    .inc-cre-related-search-container,
+    .inc-cre-tab-section {
         padding: 16px;
     }
     
     /* Adjust form groups spacing */
-    .form-group {
+    .inc-cre-form-group {
         margin-bottom: 12px;
     }
     
     /* Make header more compact */
-    .header {
+    .inc-cre-header {
         padding: 10px 16px;
         flex-wrap: wrap;
     }
     
     /* Adjust header right section */
-    .header-right {
+    .inc-cre-header-right {
         gap: 6px;
     }
     
     /* Ensure buttons don't get too small */
-    .btn {
+    .inc-cre-btn {
         padding: 8px 10px;
         font-size: 13px;
     }
     
     /* Make footer buttons take up more space */
-    .footer-buttons {
+    .inc-cre-footer-buttons {
         flex-direction: column;
         gap: 8px;
         width: 100%;
     }
     
-    .footer-buttons .btn {
+    .inc-cre-footer-buttons .inc-cre-btn {
         width: 100%;
     }
     
     /* Make tab text smaller */
-    .tab {
+    .inc-cre-tab {
         padding: 10px 12px;
         font-size: 13px;
     }
     
     /* Ensure everything in tab panes is full width */
-    .tab-pane > * {
+    .inc-cre-tab-pane > * {
         width: 100%;
     }
 }
@@ -533,55 +533,55 @@ select.form-control {
 /* Additional media query for very small screens */
 @media (max-width: 480px) {
     /* Further reduce paddings */
-    .form-wrapper,
-    .related-search-container,
-    .tab-section {
+    .inc-cre-form-wrapper,
+    .inc-cre-related-search-container,
+    .inc-cre-tab-section {
         padding: 12px;
     }
     
     /* Make the header stack vertically if needed */
-    .header {
+    .inc-cre-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
     }
     
-    .header-right {
+    .inc-cre-header-right {
         width: 100%;
         justify-content: space-between;
     }
     
     /* Further spacing adjustments */
-    .form-grid {
+    .inc-cre-form-grid {
         gap: 12px;
     }
     
     /* Make priority display more compact */
-    .priority-display {
+    .inc-cre-priority-display {
         height: auto;
         padding: 8px;
     }
     
     /* Adjust padding in tab content */
-    .tab-content {
+    .inc-cre-tab-content {
         padding: 16px 12px;
     }
     
     /* Make input text slightly smaller for better mobile display */
-    .form-control {
+    .inc-cre-form-control {
         font-size: 13px;
     }
     
     /* Adjust button sizes in various places */
-    .back-button, 
-    .menu-button, 
-    .btn-icon {
+    .inc-cre-back-button, 
+    .inc-cre-menu-button, 
+    .inc-cre-btn-icon {
         width: 28px;
         height: 28px;
     }
     
     /* Make the search icon more touchable */
-    .icon-search {
+    .inc-cre-icon-search {
         width: 44px;
     }
 }

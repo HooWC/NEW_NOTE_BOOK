@@ -7,66 +7,66 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="header-left">
-                <button class="back-button">
+    <div class="inc-cre-container">
+        <header class="inc-cre-header">
+            <div class="inc-cre-header-left">
+                <button class="inc-cre-back-button">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M19 12H5M12 19l-7-7 7-7"/>
                     </svg>
                 </button>
-                <button class="menu-button">
+                <button class="inc-cre-menu-button">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="3" y1="12" x2="21" y2="12"></line>
                         <line x1="3" y1="6" x2="21" y2="6"></line>
                         <line x1="3" y1="18" x2="21" y2="18"></line>
                     </svg>
                 </button>
-                <div class="title-group">
-                    <div class="title">Incident</div>
-                    <div class="subtitle">New record</div>
+                <div class="inc-cre-title-group">
+                    <div class="inc-cre-title">Incident</div>
+                    <div class="inc-cre-subtitle">New record</div>
                 </div>
             </div>
-            <div class="header-right">
-                <button class="btn btn-icon">
+            <div class="inc-cre-header-right">
+                <button class="inc-cre-btn inc-cre-btn-icon">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 20h9"></path>
                         <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
                     </svg>
                 </button>
-                <button class="btn btn-icon">
+                <button class="inc-cre-btn inc-cre-btn-icon">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="4" y1="6" x2="20" y2="6"></line>
                         <line x1="4" y1="12" x2="20" y2="12"></line>
                         <line x1="4" y1="18" x2="20" y2="18"></line>
                     </svg>
                 </button>
-                <button class="btn btn-icon">
+                <button class="inc-cre-btn inc-cre-btn-icon">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="1"></circle>
                         <circle cx="12" cy="5" r="1"></circle>
                         <circle cx="12" cy="19" r="1"></circle>
                     </svg>
                 </button>
-                <button class="btn btn-submit">Submit</button>
-                <button class="btn btn-resolve">Resolve</button>
+                <button class="inc-cre-btn inc-cre-btn-submit">Submit</button>
+                <button class="inc-cre-btn inc-cre-btn-resolve">Resolve</button>
             </div>
         </header>
 
-        <main class="form-wrapper">
-            <form id="incidentForm" class="incident-form">
-                <div class="form-grid">
-                    <div class="form-column">
-                        <div class="form-group">
-                            <label for="number" class="form-label">Number</label>
-                            <input type="text" id="number" class="form-control" value="INC0010005" readonly>
+        <main class="inc-cre-form-wrapper">
+            <form id="incidentForm" class="inc-cre-incident-form">
+                <div class="inc-cre-form-grid">
+                    <div class="inc-cre-form-column">
+                        <div class="inc-cre-form-group">
+                            <label for="number" class="inc-cre-form-label">Number</label>
+                            <input type="text" id="number" class="inc-cre-form-control" value="INC0010005" readonly>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="caller" class="form-label required">Caller</label>
-                            <div class="input-with-icon">
-                                <input type="text" id="caller" class="form-control" required>
-                                <button type="button" class="icon-search">
+                        <div class="inc-cre-form-group">
+                            <label for="caller" class="inc-cre-form-label inc-cre-required">Caller</label>
+                            <div class="inc-cre-input-with-icon">
+                                <input type="text" id="caller" class="inc-cre-form-control" required>
+                                <button type="button" class="inc-cre-icon-search">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <circle cx="11" cy="11" r="8"></circle>
                                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -75,9 +75,9 @@
                             </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="category" class="form-label">Category</label>
-                            <select id="category" class="form-control">
+                        <div class="inc-cre-form-group">
+                            <label for="category" class="inc-cre-form-label">Category</label>
+                            <select id="category" class="inc-cre-form-control">
                                 <option>-- None --</option>
                                 <option selected>Inquiry / Help</option>
                                 <option>Software</option>
@@ -86,18 +86,18 @@
                             </select>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="subcategory" class="form-label">Subcategory</label>
-                            <select id="subcategory" class="form-control">
+                        <div class="inc-cre-form-group">
+                            <label for="subcategory" class="inc-cre-form-label">Subcategory</label>
+                            <select id="subcategory" class="inc-cre-form-control">
                                 <option selected>-- None --</option>
                             </select>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="service" class="form-label">Service</label>
-                            <div class="input-with-icon">
-                                <input type="text" id="service" class="form-control">
-                                <button type="button" class="icon-search">
+                        <div class="inc-cre-form-group">
+                            <label for="service" class="inc-cre-form-label">Service</label>
+                            <div class="inc-cre-input-with-icon">
+                                <input type="text" id="service" class="inc-cre-form-control">
+                                <button type="button" class="inc-cre-icon-search">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <circle cx="11" cy="11" r="8"></circle>
                                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -106,11 +106,11 @@
                             </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="service-offering" class="form-label">Service offering</label>
-                            <div class="input-with-icon">
-                                <input type="text" id="service-offering" class="form-control">
-                                <button type="button" class="icon-search">
+                        <div class="inc-cre-form-group">
+                            <label for="service-offering" class="inc-cre-form-label">Service offering</label>
+                            <div class="inc-cre-input-with-icon">
+                                <input type="text" id="service-offering" class="inc-cre-form-control">
+                                <button type="button" class="inc-cre-icon-search">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <circle cx="11" cy="11" r="8"></circle>
                                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -119,11 +119,11 @@
                             </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="config-item" class="form-label">Configuration item</label>
-                            <div class="input-with-icon">
-                                <input type="text" id="config-item" class="form-control">
-                                <button type="button" class="icon-search">
+                        <div class="inc-cre-form-group">
+                            <label for="config-item" class="inc-cre-form-label">Configuration item</label>
+                            <div class="inc-cre-input-with-icon">
+                                <input type="text" id="config-item" class="inc-cre-form-control">
+                                <button type="button" class="inc-cre-icon-search">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <circle cx="11" cy="11" r="8"></circle>
                                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -133,10 +133,10 @@
                         </div>
                     </div>
                     
-                    <div class="form-column">
-                        <div class="form-group">
-                            <label for="channel" class="form-label">Channel</label>
-                            <select id="channel" class="form-control">
+                    <div class="inc-cre-form-column">
+                        <div class="inc-cre-form-group">
+                            <label for="channel" class="inc-cre-form-label">Channel</label>
+                            <select id="channel" class="inc-cre-form-control">
                                 <option selected>-- None --</option>
                                 <option>Email</option>
                                 <option>Phone</option>
@@ -144,9 +144,9 @@
                             </select>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="state" class="form-label">State</label>
-                            <select id="state" class="form-control">
+                        <div class="inc-cre-form-group">
+                            <label for="state" class="inc-cre-form-label">State</label>
+                            <select id="state" class="inc-cre-form-control">
                                 <option selected>New</option>
                                 <option>In Progress</option>
                                 <option>On Hold</option>
@@ -155,29 +155,29 @@
                             </select>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="impact" class="form-label">Impact</label>
-                            <select id="impact" class="form-control">
+                        <div class="inc-cre-form-group">
+                            <label for="impact" class="inc-cre-form-label">Impact</label>
+                            <select id="impact" class="inc-cre-form-control">
                                 <option>1 - High</option>
                                 <option>2 - Medium</option>
                                 <option selected>3 - Low</option>
                             </select>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="urgency" class="form-label">Urgency</label>
-                            <select id="urgency" class="form-control">
+                        <div class="inc-cre-form-group">
+                            <label for="urgency" class="inc-cre-form-label">Urgency</label>
+                            <select id="urgency" class="inc-cre-form-control">
                                 <option>1 - High</option>
                                 <option>2 - Medium</option>
                                 <option selected>3 - Low</option>
                             </select>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="priority" class="form-label">Priority</label>
-                            <div class="priority-display">
-                                <span id="priority-value" class="priority-value">5 - Planning</span>
-                                <svg class="info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <div class="inc-cre-form-group">
+                            <label for="priority" class="inc-cre-form-label">Priority</label>
+                            <div class="inc-cre-priority-display">
+                                <span id="priority-value" class="inc-cre-priority-value">5 - Planning</span>
+                                <svg class="inc-cre-info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="10"></circle>
                                     <line x1="12" y1="16" x2="12" y2="12"></line>
                                     <line x1="12" y1="8" x2="12.01" y2="8"></line>
@@ -185,11 +185,11 @@
                             </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="assignment-group" class="form-label">Assignment group</label>
-                            <div class="input-with-icon">
-                                <input type="text" id="assignment-group" class="form-control">
-                                <button type="button" class="icon-search">
+                        <div class="inc-cre-form-group">
+                            <label for="assignment-group" class="inc-cre-form-label">Assignment group</label>
+                            <div class="inc-cre-input-with-icon">
+                                <input type="text" id="assignment-group" class="inc-cre-form-control">
+                                <button type="button" class="inc-cre-icon-search">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <circle cx="11" cy="11" r="8"></circle>
                                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -198,11 +198,11 @@
                             </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="assigned-to" class="form-label">Assigned to</label>
-                            <div class="input-with-icon">
-                                <input type="text" id="assigned-to" class="form-control">
-                                <button type="button" class="icon-search">
+                        <div class="inc-cre-form-group">
+                            <label for="assigned-to" class="inc-cre-form-label">Assigned to</label>
+                            <div class="inc-cre-input-with-icon">
+                                <input type="text" id="assigned-to" class="inc-cre-form-control">
+                                <button type="button" class="inc-cre-icon-search">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <circle cx="11" cy="11" r="8"></circle>
                                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -213,19 +213,19 @@
                     </div>
                 </div>
                 
-                <div class="form-group short-description-group">
-                    <label for="short-description" class="form-label required">Short description</label>
-                    <div class="input-with-actions">
-                        <input type="text" id="short-description" class="form-control" required>
-                        <div class="action-buttons">
-                            <button type="button" class="btn-help">
+                <div class="inc-cre-form-group inc-cre-short-description-group">
+                    <label for="short-description" class="inc-cre-form-label inc-cre-required">Short description</label>
+                    <div class="inc-cre-input-with-actions">
+                        <input type="text" id="short-description" class="inc-cre-form-control" required>
+                        <div class="inc-cre-action-buttons">
+                            <button type="button" class="inc-cre-btn-help">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="10"></circle>
                                     <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
                                     <line x1="12" y1="17" x2="12.01" y2="17"></line>
                                 </svg>
                             </button>
-                            <button type="button" class="btn-help">
+                            <button type="button" class="inc-cre-btn-help">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <line x1="4" y1="6" x2="20" y2="6"></line>
                                     <line x1="4" y1="12" x2="20" y2="12"></line>
@@ -236,15 +236,15 @@
                     </div>
                 </div>
                 
-                <div class="form-group full-width">
-                    <label for="description" class="form-label">Description</label>
-                    <textarea id="description" class="form-control description-textarea" rows="5"></textarea>
+                <div class="inc-cre-form-group inc-cre-full-width">
+                    <label for="description" class="inc-cre-form-label">Description</label>
+                    <textarea id="description" class="inc-cre-form-control inc-cre-description-textarea" rows="5"></textarea>
                 </div>
             </form>
         </main>
 
-        <div class="related-search-container">
-            <button class="btn btn-related-search">
+        <div class="inc-cre-related-search-container">
+            <button class="inc-cre-btn inc-cre-btn-related-search">
                 Related Search Results
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <polyline points="6 9 12 15 18 9"></polyline>
@@ -252,25 +252,25 @@
             </button>
         </div>
 
-        <div class="tab-section">
-            <div class="tabs">
-                <button class="tab active">Notes</button>
-                <button class="tab">Related Records</button>
-                <button class="tab">Resolution Information</button>
+        <div class="inc-cre-tab-section">
+            <div class="inc-cre-tabs">
+                <button class="inc-cre-tab active">Notes</button>
+                <button class="inc-cre-tab">Related Records</button>
+                <button class="inc-cre-tab">Resolution Information</button>
             </div>
 
-            <div class="tab-content">
-                <div id="notes-tab" class="tab-pane active">
-                    <div class="watch-list">
+            <div class="inc-cre-tab-content">
+                <div id="notes-tab" class="inc-cre-tab-pane active">
+                    <div class="inc-cre-watch-list">
                         <span>Watch list</span>
-                        <div class="list-actions">
-                            <button class="icon-button">
+                        <div class="inc-cre-list-actions">
+                            <button class="inc-cre-icon-button">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                     <circle cx="12" cy="7" r="4"></circle>
                                 </svg>
                             </button>
-                            <button class="icon-button">
+                            <button class="inc-cre-icon-button">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                     <circle cx="9" cy="7" r="4"></circle>
@@ -280,18 +280,18 @@
                             </button>
                         </div>
                     </div>
-                    <textarea class="notes-textarea"></textarea>
+                    <textarea class="inc-cre-notes-textarea"></textarea>
                     
-                    <div class="work-notes-list">
+                    <div class="inc-cre-work-notes-list">
                         <span>Work notes list</span>
-                        <div class="list-actions">
-                            <button class="icon-button">
+                        <div class="inc-cre-list-actions">
+                            <button class="inc-cre-icon-button">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                     <circle cx="12" cy="7" r="4"></circle>
                                 </svg>
                             </button>
-                            <button class="icon-button">
+                            <button class="inc-cre-icon-button">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                     <circle cx="9" cy="7" r="4"></circle>
@@ -302,23 +302,23 @@
                         </div>
                     </div>
                     
-                    <div class="notes-group">
+                    <div class="inc-cre-notes-group">
                         <label for="additional-comments">Additional comments</label>
-                        <textarea id="additional-comments" class="notes-textarea"></textarea>
+                        <textarea id="additional-comments" class="inc-cre-notes-textarea"></textarea>
                     </div>
                     
-                    <div class="notes-group">
+                    <div class="inc-cre-notes-group">
                         <label for="work-notes">Work notes</label>
-                        <textarea id="work-notes" class="notes-textarea work-notes-textarea"></textarea>
+                        <textarea id="work-notes" class="inc-cre-notes-textarea inc-cre-work-notes-textarea"></textarea>
                     </div>
                 </div>
             </div>
         </div>
 
-        <footer class="form-footer">
-            <div class="footer-buttons">
-                <button type="button" class="btn btn-submit-footer">Submit</button>
-                <button type="button" class="btn btn-resolve-footer">Resolve</button>
+        <footer class="inc-cre-form-footer">
+            <div class="inc-cre-footer-buttons">
+                <button type="button" class="inc-cre-btn inc-cre-btn-submit-footer">Submit</button>
+                <button type="button" class="inc-cre-btn inc-cre-btn-resolve-footer">Resolve</button>
             </div>
         </footer>
     </div>
